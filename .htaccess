@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName “sample”
+AuthUserFile C:\xampp\htdocs\20220327\.htpasswd
+require valid-user
+
