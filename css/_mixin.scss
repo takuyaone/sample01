@@ -1,0 +1,21 @@
+@mixin content_btn {
+      text-align: center;
+      color: $cNavy;
+      a {
+        display: inline-block;
+        padding: 6px 0;
+        width: 240px;
+        font-size: 14px;
+        line-height: 26px;
+        border: 1px solid $cNavy;
+        span {
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-left: 5px solid $cNavy;
+          border-top: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          margin-left: 15px;
+        }
+      }
+    }
