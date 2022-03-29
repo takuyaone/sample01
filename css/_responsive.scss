@@ -291,3 +291,201 @@
     }
   }
 }
+
+/* WORKS */
+.works{
+  &__title {
+    margin-left: 8%;
+    width: 345px;
+    height: 525px;
+    z-index: -99;
+  }
+  &__index {
+    text-align: right;
+    margin-right: 8%;
+    margin-bottom: 80px;
+    h2 {
+      font-size: 28px;
+      line-height: 28px;
+    }
+  }
+  &__slider {
+    margin-bottom: 40px;
+    overflow: hidden;
+    .slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+      margin:0 auto;
+      position: relative;
+      z-index: -2;
+
+      li {
+        text-align: left;
+        p {
+          font-size: 20px;
+          margin-left: 50px;
+        }
+      }
+    }
+
+    .slider img {
+      width: 50vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+      height:auto;
+
+    }
+
+    .slider .slick-slide {
+      transform: scale(0.8);/*左右の画像のサイズを80%に*/
+      transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+    }
+
+    .slider .slick-slide.slick-center{
+      transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+    }
+
+
+    /*矢印の設定*/
+
+    /*戻る、次へ矢印の位置*/
+    .slick-prev, 
+    .slick-next {
+      position: absolute;/*絶対配置にする*/
+      top: 42%;
+      cursor: pointer;/*マウスカーソルを指マークに*/
+      outline: none;/*クリックをしたら出てくる枠線を消す*/
+      border-top: 2px solid #2D2D2D;/*矢印の色*/
+      border-right: 2px solid #2D2D2D;/*矢印の色*/
+      height: 15px;
+      width: 15px;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    .prev_radius,
+    .next_radius{
+      border: 1px solid #AEB6C7;
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      position: absolute;
+      z-index: -1;
+    }
+
+    .prev_radius {
+      top: 27%;
+      right: 15%;
+    }
+
+    .next_radius {
+      top: 27%;
+      right: 7%;
+    }
+
+    .slick-prev:after{
+      content:"";
+        /*描画位置*/
+      position: absolute;
+      bottom: 0;
+      right: 6px;
+      width: 1px;
+      height: 16px;
+      background: #000;
+      transform: skewX(135deg);
+    }
+
+    .slick-next:after{
+      content:"";
+        /*描画位置*/
+      position: absolute;
+      bottom: 0;
+      right: 6px;
+      width: 1px;
+      height: 16px;
+      background: #000;
+      transform: skewX(-45deg);
+    }
+
+    .slick-prev {/*戻る矢印の位置と形状*/
+      top: 5%;
+      right: 18%;
+      transform: rotate(-135deg);
+    }
+
+    .slick-next {/*次へ矢印の位置と形状*/
+      top: 5%;
+      right: 10%;
+      transform: rotate(45deg);
+    }
+
+  }
+  &__text {
+    width: 528px;
+    margin: 0 auto 40px;
+  }
+  .content_btn {
+    margin-bottom: 30px;
+  }
+  .serch_btn {
+    margin-bottom: 100px;
+  }
+}
+
+/* BLOG */
+.blog {
+  height: 515px;
+  margin-bottom: 80px;
+  background-image: url('../images/pc/blog_bg@2x.png');
+  &__title {
+    width: 335px;
+    height: 369px;
+    margin-right: 8%;
+
+    h1 {
+      padding-bottom: 260px;
+    }
+  }
+  &__list{
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 30px 95px 50px;
+    .blog_card {
+      width: 760px;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      p {
+        display: inline-block;
+        margin-right: 40px;
+      }
+      a {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+/* CONTACT */
+.contact {
+  height: 156px;
+  background-image: url('../images/pc/contact@2x.png');
+  &__text {
+    p {
+      font-size: 24px;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    .phone {
+      margin-right: 80px;
+    }
+  }
+}
+
+/* FOOTER */
+.footer {
+  &__text {
+    p {
+      font-size: 16px;
+    }
+  }
+}

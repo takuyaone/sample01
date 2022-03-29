@@ -7,19 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800&family=Noto+Sans+JP&family=Overpass:wght@900&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/530eef1825.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/reset.css">
-  <!-- <link rel="stylesheet" href="css/style.min.css"> -->
-  <link rel="stylesheet" href="<?php get_template_directory_uri(); ?>/style.css">
-
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
+  <?php
+  wp_head();
+  ?>
   <title>Document</title>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
+  <?php
+  wp_body_open();
+  ?>
   <header class="header">
     <div class="header__bar">
       <div class="header_logo">
-        <img src="images/sp/パス 7.png" class="sp" alt="logo">
-        <img src="images/pc/パス 7@2x.png" class="pc" alt="logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/sp/パス 7.png" class="sp" alt="logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/pc/パス 7@2x.png" class="pc" alt="logo">
       </div>
       <div class="header_menu">
         <div class="openbtn"><span></span><span></span><span></span></div>
@@ -57,9 +61,9 @@
     </div>
     <div class="header__view">
       <div class="header__view_images">
-        <img src="images/sp/blue.png" class="first_sp sp" alt="">
-        <img src="images/sp/img.png" class="second_sp sp" alt="">
-        <img src="images/fv-img01@2x.png" class="first_pc pc" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/sp/blue.png" class="first_sp sp" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/sp/img.png" class="second_sp sp" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/fv-img01@2x.png" class="first_pc pc" alt="">
       </div>
       <div class="header__view_title">
         <h1>法人集客にフォーカスした</h1>
@@ -93,8 +97,8 @@
       <div class="concept__content">
         <div class="flex">
           <div class="image_area">
-            <img src="images/sp/img1.png" class="sp" alt="">
-            <img src="images/pc/img1@2x.png" class="pc" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/sp/img1.png" class="sp" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/pc/img1@2x.png" class="pc" alt="">
           </div>
           <div class="flex_content">
             <div class="content_title">
@@ -181,7 +185,7 @@
     <div class="service__content">
       <div class="service_card">
         <div class="image_area">
-          <img src="images/sp/マスクグループ 1.png" class="sp" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/sp/マスクグループ 1.png" class="sp" alt="">
           <h3>ホームページ制作事業</h3>
           <p>WEBSITE DESIGN</p>
         </div>
@@ -194,7 +198,7 @@
       </div>
       <div class="service_card">
         <div class="image_area">
-          <img src="images/sp/マスクグループ 2.png" class="sp" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/sp/マスクグループ 2.png" class="sp" alt="">
           <h3>SEO対策事業</h3>
           <p>SEARCH ENGINE MARKETING</p>
         </div>
@@ -207,7 +211,7 @@
       </div>
       <div class="service_card">
         <div class="image_area">
-          <img src="images/sp/マスクグループ 3.png" class="sp" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/sp/マスクグループ 3.png" class="sp" alt="">
           <h3>WEB運用事業</h3>
           <p>WEB OPERATION</p>
         </div>
@@ -232,6 +236,15 @@
   </section>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+  <?php
+  if (is_home()) {
+    wp_enqueue_style('slick-carousel', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+    wp_enqueue_script('slick-carousel', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js');
+    wp_enqueue_script('bistro-calme-home', get_template_directory_uri() . '/assets/js/home.js');
+  }
+  ?>
+
+  <?php wp_footer(); ?>
 </body>
 
 </html>

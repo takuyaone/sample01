@@ -509,8 +509,8 @@ P {
     top: 100px;
     right: 0;
     z-index: -1;
-    width: 180px;
-    height: 75vh;
+    width: 160px;
+    height: 614px;
     background-color: #fff;
     background-image:
     radial-gradient($cNavy 10%, transparent 10%);
@@ -548,8 +548,7 @@ P {
   &__content {
     text-align: center;
     .service_card {
-      padding: 0 30px;
-      margin-bottom: 70px;
+      margin: 0 30px 70px;
       background-color: #fff;
       .image_area {
         position: relative;
@@ -600,7 +599,7 @@ P {
     top: 0;
     z-index: -1;
     width: 180px;
-    height: 75vh;
+    height: 60vh;
     background-color: #fff;
     background-image:
     radial-gradient($cNavy 10%, transparent 10%);
@@ -619,7 +618,7 @@ P {
   &__index {
     text-align: center;
     padding: 100px 0 0;
-    margin:0 20px 30px;
+    margin:0 20px 15px;
     h2 {
       display: inline-block;
       padding: 10px 12px;
@@ -634,6 +633,206 @@ P {
       font-size: 14px;
       line-height: 26px;
     }
+  }
+  &__slider {
+    margin-bottom: 20px;
+    .slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+      width: 100vw;
+      margin:0 auto;
+      li {
+        text-align: center;
+        p {
+          display: inline-block;
+          background-color: #fff;
+          font-size: 18px;
+          line-height: 20px;
+          color: $cNavy;
+          padding: 5px 10px;
+          font-weight: 700;
+          letter-spacing: 0.2rem;
+          margin-top: -10px;
+        }
+      }
+
+    }
+
+    .slider img {
+      width:100%;/*スライダー内の画像を横幅100%に*/
+      height:auto;
+    }
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+    .slider .slick-slide {
+      margin:0 10px;
+    }
+
+
+  }
+  &__text {
+    margin: 0 20px 40px;
+    p {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+  .content_btn {
+    @include content_btn;
+    margin-bottom: 60px;
+  }
+
+  .serch_btn {
+    @include content_btn;
+    margin-bottom: 80px;
+    color: #fff;
+    a {
+      background-color: #AEB6C7;
+      border: none;
+    }
+  }
+}
+
+/* BLOG */
+.blog {
+  background-image: url('../images/sp/bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+  &__title {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    width: 160px;
+    height: 410px;
+    background-image:
+    radial-gradient($cNavy 10%, transparent 10%);
+    background-size: 10px 10px;
+    padding-top: 40px;
+    overflow: hidden;
+    h1 {
+      font-size: 100px;
+      transform: rotate(90deg);
+      color: #EFF1F4;
+      letter-spacing: 0.8rem;
+      font-family: 'Archivo', sans-serif;
+      padding-bottom: 95px;
+    }
+  }
+  &__list {
+    background-color: #fff;
+    margin: 80px 20px;
+    padding: 35px 25px;
+    position: absolute;
+    z-index: 2;
+    .blog_card{
+      font-size: 16px;
+      line-height: 27px;
+      border-bottom: 1px solid $cBorder;
+      padding-bottom: 25px;
+      margin-bottom: 30px;
+      a{
+        text-decoration: underline;
+      }
+    }
+    .blog_card:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* CONTACT */
+.contact {
+  background-image: url('../images/sp/contact.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 252px;
+  padding: 80px 40px;
+  &__text {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+
+    p{
+      font-size: 18px;
+      line-height: 36px;
+      font-weight: 700;
+      letter-spacing: 0.1rem;
+    }
+  }
+  &__content {
+    .phone {
+      text-align: center;
+      margin-bottom: 40px;
+      p {
+        display: inline-block;
+        font-size: 24px;
+        letter-spacing: 0.1rem;
+        vertical-align: middle;
+        background-color: $cNavy ;
+        color: #fff;
+        padding: 4px 24px;
+        .fas {
+          margin-right: 6px;
+          font-size: 16px;
+          vertical-align: inherit;
+        }
+        span {
+          font-size: 16px;
+          letter-spacing: 0;
+          margin-left: 10px;
+        }
+      }
+    }
+    .btn {
+        text-align: center;
+      a{
+        display: inline-block;
+        background-color: #20868A;
+        width: 240px;
+        font-size: 20px;
+        padding: 18px 0;
+        color: #fff;
+        font-weight: 500;
+        span {
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-left: 5px solid #fff;
+          border-top: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          margin-left: 15px;
+          margin-bottom: 1px;
+        }
+      }
+    }
+  }
+}
+
+/* FOOTER */
+.footer {
+  background-color: $cNavy;
+  padding: 40px 30px;
+  text-align: center;
+  &__logo{
+    margin-bottom: 20px;
+  }
+  &__text {
+    margin-bottom: 30px;
+    p {
+      color: #fff;
+      font-size: 14px;
+      line-height: 19px;
+      font-weight: 300;
+    }
+  }
+  small {
+    color: #AEB6C7;
+    font-size: 11px;
+    line-height: 19px;
+    font-weight: 300;
   }
 }
 

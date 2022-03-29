@@ -1,5 +1,0 @@
-AuthType Basic
-AuthName “sample”
-AuthUserFile https://takuyaone.github.io/sample01/
-require valid-user
-

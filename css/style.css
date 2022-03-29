@@ -595,8 +595,8 @@ P {
   top: 100px;
   right: 0;
   z-index: -1;
-  width: 180px;
-  height: 75vh;
+  width: 160px;
+  height: 614px;
   background-color: #fff;
   background-image: radial-gradient(#192F60 10%, transparent 10%);
   background-size: 10px 10px;
@@ -641,8 +641,7 @@ P {
 }
 
 .service__content .service_card {
-  padding: 0 30px;
-  margin-bottom: 70px;
+  margin: 0 30px 70px;
   background-color: #fff;
 }
 
@@ -719,7 +718,7 @@ P {
   top: 0;
   z-index: -1;
   width: 180px;
-  height: 75vh;
+  height: 60vh;
   background-color: #fff;
   background-image: radial-gradient(#192F60 10%, transparent 10%);
   background-size: 10px 10px;
@@ -739,7 +738,7 @@ P {
 .works__index {
   text-align: center;
   padding: 100px 0 0;
-  margin: 0 20px 30px;
+  margin: 0 20px 15px;
 }
 
 .works__index h2 {
@@ -756,6 +755,268 @@ P {
 .works__index p {
   font-size: 14px;
   line-height: 26px;
+}
+
+.works__slider {
+  margin-bottom: 20px;
+  /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+}
+
+.works__slider .slider {
+  /*横幅94%で左右に余白を持たせて中央寄せ*/
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.works__slider .slider li {
+  text-align: center;
+}
+
+.works__slider .slider li p {
+  display: inline-block;
+  background-color: #fff;
+  font-size: 18px;
+  line-height: 20px;
+  color: #192F60;
+  padding: 5px 10px;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  margin-top: -10px;
+}
+
+.works__slider .slider img {
+  width: 100%;
+  /*スライダー内の画像を横幅100%に*/
+  height: auto;
+}
+
+.works__slider .slider .slick-slide {
+  margin: 0 10px;
+}
+
+.works__text {
+  margin: 0 20px 40px;
+}
+
+.works__text p {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.works .content_btn {
+  text-align: center;
+  color: #192F60;
+  margin-bottom: 60px;
+}
+
+.works .content_btn a {
+  display: inline-block;
+  padding: 6px 0;
+  width: 240px;
+  font-size: 14px;
+  line-height: 26px;
+  border: 1px solid #192F60;
+}
+
+.works .content_btn a span {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid #192F60;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  margin-left: 15px;
+}
+
+.works .serch_btn {
+  text-align: center;
+  color: #192F60;
+  margin-bottom: 80px;
+  color: #fff;
+}
+
+.works .serch_btn a {
+  display: inline-block;
+  padding: 6px 0;
+  width: 240px;
+  font-size: 14px;
+  line-height: 26px;
+  border: 1px solid #192F60;
+}
+
+.works .serch_btn a span {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid #192F60;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  margin-left: 15px;
+}
+
+.works .serch_btn a {
+  background-color: #AEB6C7;
+  border: none;
+}
+
+/* BLOG */
+.blog {
+  background-image: url("../images/sp/bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.blog__title {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  width: 160px;
+  height: 410px;
+  background-image: radial-gradient(#192F60 10%, transparent 10%);
+  background-size: 10px 10px;
+  padding-top: 40px;
+  overflow: hidden;
+}
+
+.blog__title h1 {
+  font-size: 100px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  color: #EFF1F4;
+  letter-spacing: 0.8rem;
+  font-family: 'Archivo', sans-serif;
+  padding-bottom: 95px;
+}
+
+.blog__list {
+  background-color: #fff;
+  margin: 80px 20px;
+  padding: 35px 25px;
+  position: absolute;
+  z-index: 2;
+}
+
+.blog__list .blog_card {
+  font-size: 16px;
+  line-height: 27px;
+  border-bottom: 1px solid #CACACA;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+}
+
+.blog__list .blog_card a {
+  text-decoration: underline;
+}
+
+.blog__list .blog_card:last-of-type {
+  margin-bottom: 0;
+}
+
+/* CONTACT */
+.contact {
+  background-image: url("../images/sp/contact.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 252px;
+  padding: 80px 40px;
+}
+
+.contact__text {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact__text p {
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.contact__content .phone {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact__content .phone p {
+  display: inline-block;
+  font-size: 24px;
+  letter-spacing: 0.1rem;
+  vertical-align: middle;
+  background-color: #192F60;
+  color: #fff;
+  padding: 4px 24px;
+}
+
+.contact__content .phone p .fas {
+  margin-right: 6px;
+  font-size: 16px;
+  vertical-align: inherit;
+}
+
+.contact__content .phone p span {
+  font-size: 16px;
+  letter-spacing: 0;
+  margin-left: 10px;
+}
+
+.contact__content .btn {
+  text-align: center;
+}
+
+.contact__content .btn a {
+  display: inline-block;
+  background-color: #20868A;
+  width: 240px;
+  font-size: 20px;
+  padding: 18px 0;
+  color: #fff;
+  font-weight: 500;
+}
+
+.contact__content .btn a span {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid #fff;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  margin-left: 15px;
+  margin-bottom: 1px;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #192F60;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.footer__logo {
+  margin-bottom: 20px;
+}
+
+.footer__text {
+  margin-bottom: 30px;
+}
+
+.footer__text p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 300;
+}
+
+.footer small {
+  color: #AEB6C7;
+  font-size: 11px;
+  line-height: 19px;
+  font-weight: 300;
 }
 
 @media (min-width: 768px) {
@@ -1068,6 +1329,199 @@ P {
   }
   .service__content .service_card .image_area img {
     width: 100%;
+  }
+  /* WORKS */
+  .works__title {
+    margin-left: 8%;
+    width: 345px;
+    height: 525px;
+    z-index: -99;
+  }
+  .works__index {
+    text-align: right;
+    margin-right: 8%;
+    margin-bottom: 80px;
+  }
+  .works__index h2 {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .works__slider {
+    margin-bottom: 40px;
+    overflow: hidden;
+    /*矢印の設定*/
+    /*戻る、次へ矢印の位置*/
+  }
+  .works__slider .slider {
+    /*横幅94%で左右に余白を持たせて中央寄せ*/
+    margin: 0 auto;
+    position: relative;
+    z-index: -2;
+  }
+  .works__slider .slider li {
+    text-align: left;
+  }
+  .works__slider .slider li p {
+    font-size: 20px;
+    margin-left: 50px;
+  }
+  .works__slider .slider img {
+    width: 50vw;
+    /*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height: auto;
+  }
+  .works__slider .slider .slick-slide {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    /*左右の画像のサイズを80%に*/
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    /*拡大や透過のアニメーションを0.5秒で行う*/
+  }
+  .works__slider .slider .slick-slide.slick-center {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    /*中央の画像のサイズだけ等倍に*/
+  }
+  .works__slider .slick-prev,
+  .works__slider .slick-next {
+    position: absolute;
+    /*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;
+    /*マウスカーソルを指マークに*/
+    outline: none;
+    /*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #2D2D2D;
+    /*矢印の色*/
+    border-right: 2px solid #2D2D2D;
+    /*矢印の色*/
+    height: 15px;
+    width: 15px;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .works__slider .prev_radius,
+  .works__slider .next_radius {
+    border: 1px solid #AEB6C7;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    z-index: -1;
+  }
+  .works__slider .prev_radius {
+    top: 27%;
+    right: 15%;
+  }
+  .works__slider .next_radius {
+    top: 27%;
+    right: 7%;
+  }
+  .works__slider .slick-prev:after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    right: 6px;
+    width: 1px;
+    height: 16px;
+    background: #000;
+    -webkit-transform: skewX(135deg);
+            transform: skewX(135deg);
+  }
+  .works__slider .slick-next:after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    right: 6px;
+    width: 1px;
+    height: 16px;
+    background: #000;
+    -webkit-transform: skewX(-45deg);
+            transform: skewX(-45deg);
+  }
+  .works__slider .slick-prev {
+    /*戻る矢印の位置と形状*/
+    top: 5%;
+    right: 18%;
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+  }
+  .works__slider .slick-next {
+    /*次へ矢印の位置と形状*/
+    top: 5%;
+    right: 10%;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .works__text {
+    width: 528px;
+    margin: 0 auto 40px;
+  }
+  .works .content_btn {
+    margin-bottom: 30px;
+  }
+  .works .serch_btn {
+    margin-bottom: 100px;
+  }
+  /* BLOG */
+  .blog {
+    height: 515px;
+    margin-bottom: 80px;
+    background-image: url("../images/pc/blog_bg@2x.png");
+  }
+  .blog__title {
+    width: 335px;
+    height: 369px;
+    margin-right: 8%;
+  }
+  .blog__title h1 {
+    padding-bottom: 260px;
+  }
+  .blog__list {
+    top: 15%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin: 0;
+    padding: 30px 95px 50px;
+  }
+  .blog__list .blog_card {
+    width: 760px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+  .blog__list .blog_card p {
+    display: inline-block;
+    margin-right: 40px;
+  }
+  .blog__list .blog_card a {
+    display: inline-block;
+  }
+  /* CONTACT */
+  .contact {
+    height: 156px;
+    background-image: url("../images/pc/contact@2x.png");
+  }
+  .contact__text p {
+    font-size: 24px;
+  }
+  .contact__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact__content .phone {
+    margin-right: 80px;
+  }
+  /* FOOTER */
+  .footer__text p {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=style.css.map */
