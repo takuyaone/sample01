@@ -36,10 +36,34 @@
               font-weight: 500;
               font-size: 13px;
               line-height: 16px;
+              transition: all .3s;
+              position: relative;
+              display: block;
               span {
                 font-size: 16px;
                 line-height: 35px;
               }
+            }
+            a::after {
+              content: '';
+              /*絶対配置で線の位置を決める*/
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              /*線の形状*/
+              width: 100%;
+              height: 2px;
+              background: $cNavy;
+              /*アニメーションの指定*/
+              transition: all .3s;
+              transform: scale(0, 1);/*X方向0、Y方向1*/
+              transform-origin: left top;/*左上基点*/
+            }
+            a:hover {
+              opacity: 0.7;
+            }
+            a:hover::after {
+              transform: scale(1, 1);/*X方向にスケール拡大*/
             }
             .phone {
               font-size: 24px;
@@ -73,6 +97,9 @@
               .fas {
                 font-size: 30px;
               }
+            }
+            .contact_btn::after {
+              content: none;
             }
           }
         }
@@ -116,6 +143,14 @@
       &_phone {
         margin-right: 75px;
       }
+      &_btn {
+        a {
+          transition: all .3s;
+        }
+        a:hover {
+          opacity: 0.7;
+        }
+      }
     }
     &__article {
       bottom: -40px;
@@ -140,6 +175,38 @@
         }
       }
     }
+    .scrolldown {
+      display: block;
+      position: absolute;
+      right:3%;
+      bottom:50px;
+      height:50px;
+      transition: all .3s;
+      cursor: pointer;
+    }
+    .scrolldown:hover {
+      opacity: 0.7;
+    }
+
+    .scrolldown span{
+      position: absolute;
+      left: -20px;
+      top: -35px;
+      color: #eee;
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      transform: rotate(90deg);
+    }
+
+    .scrolldown::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 1px;
+      height: 60px;
+      background: #eee;
+    }
+
   }
 }
 
@@ -192,16 +259,21 @@
         }
       }
     }
+    .content_text {
+      width: 950px;
+      margin: 0 0 30px auto;
+      padding: 0;
+    }
+    .content_btn {
+      @include content_btn_hv;
+    }
   }
-  .content_text {
-    width: 950px;
-    margin: 0 0 30px auto;
-    padding: 0;
-  }
+  
   .feature {
     display: flex;
     background-color: $cBgSer;
     height: 522px;
+    overflow: hidden;
     &__title {
       width: 30%;
       padding-left: 8%;
@@ -220,7 +292,7 @@
       position: relative;
       .skew_bg {
         background-color: #fff;
-        transform: skewX(-20deg);
+        transform: skewX(-25deg);
         height: 522px;
         position: absolute;
         top: 0;
@@ -242,7 +314,7 @@
       }
       .first{
         top: 50px;
-        left: 180px;
+        left: 190px;
       }
       .second {
         top: 200px;
@@ -250,7 +322,7 @@
       }
       .third {
         top: 350px;
-        left: 70px;
+        left: 60px;
       }
     }
   }
@@ -288,6 +360,9 @@
           width: 100%;
         }
       }
+      .content_btn {
+        @include content_btn_hv;
+      }
     }
   }
 }
@@ -314,9 +389,6 @@
     overflow: hidden;
     .slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
       margin:0 auto;
-      position: relative;
-      z-index: -2;
-
       li {
         text-align: left;
         p {
@@ -351,66 +423,72 @@
       top: 42%;
       cursor: pointer;/*マウスカーソルを指マークに*/
       outline: none;/*クリックをしたら出てくる枠線を消す*/
-      border-top: 2px solid #2D2D2D;/*矢印の色*/
-      border-right: 2px solid #2D2D2D;/*矢印の色*/
-      height: 15px;
-      width: 15px;
-      z-index: 2;
-      cursor: pointer;
-    }
-
-    .prev_radius,
-    .next_radius{
-      border: 1px solid #AEB6C7;
+      border: 1px solid $cNavy;
       border-radius: 50%;
-      width: 64px;
       height: 64px;
-      position: absolute;
-      z-index: -1;
+      width: 64px;
+      z-index: 2;
     }
 
-    .prev_radius {
-      top: 27%;
-      right: 15%;
-    }
-
-    .next_radius {
-      top: 27%;
-      right: 7%;
+    .slick-prev:before{
+    content:"";
+    /*描画位置*/
+    position: absolute;/*絶対配置にする*/
+    top: 35%;
+    left: 48%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;/*矢印の色*/
+    border-right: 2px solid #666;/*矢印の色*/
+    height: 10px;
+    width: 10px;
     }
 
     .slick-prev:after{
-      content:"";
-        /*描画位置*/
+      content: "";
       position: absolute;
-      bottom: 0;
-      right: 6px;
+      top: 38%;
+      left: 50%;
       width: 1px;
       height: 16px;
       background: #000;
       transform: skewX(135deg);
     }
 
-    .slick-next:after{
+    .slick-next:before{
       content:"";
-        /*描画位置*/
+      /*描画位置*/
+      position: absolute;/*絶対配置にする*/
+      top: 35%;
+      right: 35%;
+
+      cursor: pointer;/*マウスカーソルを指マークに*/
+      outline: none;/*クリックをしたら出てくる枠線を消す*/
+      border-top: 2px solid #666;/*矢印の色*/
+      border-right: 2px solid #666;/*矢印の色*/
+      height: 10px;
+      width: 10px;
+    }
+
+    .slick-next:after{
+      content: "";
       position: absolute;
-      bottom: 0;
-      right: 6px;
+      top: 38%;
+      left: 50%;
       width: 1px;
       height: 16px;
       background: #000;
-      transform: skewX(-45deg);
+      transform: skewX(135deg);
     }
 
     .slick-prev {/*戻る矢印の位置と形状*/
-      top: 5%;
+      top: 1%;
       right: 18%;
       transform: rotate(-135deg);
     }
 
     .slick-next {/*次へ矢印の位置と形状*/
-      top: 5%;
+      top: 1%;
       right: 10%;
       transform: rotate(45deg);
     }
@@ -421,10 +499,19 @@
     margin: 0 auto 40px;
   }
   .content_btn {
+    @include content_btn_hv;
     margin-bottom: 30px;
   }
-  .serch_btn {
+  .search_btn {
     margin-bottom: 100px;
+    a{
+      transition: all .3s;
+    }
+    a:hover {
+      background-color: #fff;
+      color: #AEB6C7;
+      border: 1px solid #AEB6C7;
+    }
   }
 }
 
@@ -477,6 +564,14 @@
     justify-content: center;
     .phone {
       margin-right: 80px;
+    }
+    .btn {
+      a {
+        transition: all .3s;
+      }
+      a:hover {
+        opacity: 0.7;
+      }
     }
   }
 }

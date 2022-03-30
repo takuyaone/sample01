@@ -5,6 +5,13 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
   color: #333333;
 }
+
+.fixed {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -20,7 +27,7 @@ P {
   &__bar{
     background-color: #fff;
     padding: 24px 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -99,7 +106,7 @@ P {
         font-weight: 500;
       }
 
-      .contact {
+      .nav_contact {
         position: absolute;
         top: 550px;
         left: 50%;
@@ -343,6 +350,9 @@ P {
           text-overflow: ellipsis;
         }
       }
+    }
+    .scrolldown {
+      display: none;
     }
   }
 }
@@ -681,13 +691,16 @@ P {
     margin-bottom: 60px;
   }
 
-  .serch_btn {
+  .search_btn {
     @include content_btn;
     margin-bottom: 80px;
     color: #fff;
     a {
       background-color: #AEB6C7;
-      border: none;
+      border: 1px solid #fff;
+    }
+    a::after {
+      content: none;
     }
   }
 }

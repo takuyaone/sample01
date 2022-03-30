@@ -1,21 +1,37 @@
 @mixin content_btn {
-      text-align: center;
-      color: $cNavy;
-      a {
-        display: inline-block;
-        padding: 6px 0;
-        width: 240px;
-        font-size: 14px;
-        line-height: 26px;
-        border: 1px solid $cNavy;
-        span {
-          display: inline-block;
-          width: 0;
-          height: 0;
-          border-left: 5px solid $cNavy;
-          border-top: 5px solid transparent;
-          border-bottom: 5px solid transparent;
-          margin-left: 15px;
-        }
-      }
-    }
+  text-align: center;
+  color: $cNavy;
+  a {
+    display: inline-block;
+    padding: 6px 0;
+    width: 240px;
+    font-size: 14px;
+    line-height: 26px;
+    border: 1px solid $cNavy;
+  }
+  a::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid $cNavy;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    margin-left: 15px;
+  }
+}
+
+@mixin  content_btn_hv {
+  a {
+    transition: all .3s;
+  }
+  a:hover {
+    background-color: $cNavy;
+    color: #fff;
+  }
+  a:hover::after {
+    border-left: 5px solid #fff;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+  }
+}
