@@ -604,6 +604,7 @@ P {
 /* WORKS */
 .works {
   position: relative;
+  overflow: hidden;
   &__title {
     position: absolute;
     top: 0;
@@ -649,6 +650,7 @@ P {
     .slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
       width: 100vw;
       margin:0 auto;
+      display: none;
       li {
         text-align: center;
         p {
@@ -663,7 +665,9 @@ P {
           margin-top: -10px;
         }
       }
-
+    }
+    .slick-initialized {
+      display: block;
     }
 
     .slider img {
