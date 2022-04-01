@@ -236,7 +236,7 @@ P {
 .header__view_images {
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  height: 848px;
 }
 
 .header__view_images .first_sp {
@@ -259,7 +259,7 @@ P {
 
 .header__view_title {
   position: absolute;
-  top: 290px;
+  top: 35%;
   left: 4%;
   z-index: 2;
   color: #192F60;
@@ -291,7 +291,7 @@ P {
 
 .header__view__contact {
   position: absolute;
-  top: 545px;
+  top: 64%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -352,12 +352,13 @@ P {
 
 .header__view__article {
   position: absolute;
-  margin: 0 4%;
-  bottom: -50px;
+  bottom: -80px;
   background-color: #fff;
   display: flex;
   padding: 20px;
   z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .header__view__article .article_title {

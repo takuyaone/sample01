@@ -219,7 +219,7 @@ P {
     &_images {
       position: relative;
       overflow: hidden;
-      height: 100vh;
+      height: 848px;
       .first_sp {
         position: absolute;
         top:0;
@@ -239,7 +239,7 @@ P {
     }
     &_title {
       position: absolute;
-      top: 290px;
+      top: 35%;
       left: 4%;
       z-index: 2;
       color: $cNavy;
@@ -267,7 +267,7 @@ P {
     }
     &__contact {
       position: absolute;
-      top: 545px;
+      top: 64%;
       left: 50%;
       transform: translateX(-50%);
       width: 100%;
@@ -320,12 +320,13 @@ P {
     }
     &__article {
       position: absolute;
-      margin: 0 4%;
-      bottom: -50px;
+      bottom: -80px;
       background-color: #fff;
       display: flex;
       padding: 20px;
       z-index: 2;
+      left: 50%;
+      transform: translateX(-50%);
       .article_title {
         color: $cNavy;
         font-size: 22px;
