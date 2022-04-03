@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "sample"
-AuthUserFile "C:/xampp/htdocs/20220328/.htpasswd"
+AuthUserFile "https://capable-sunburst-bd0eac.netlify.app/.htpasswd"
 require valid-user
