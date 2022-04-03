@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "sample"
-AuthUserFile "https://takuyaone.github.io/sample01/.htpasswd"
+AuthUserFile "C:/xampp/htdocs/20220328/.htpasswd"
 require valid-user
